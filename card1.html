@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky Horizontal Scroll Section</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    .section-wrapper {
+      width: 100%;
+      height: 200vh; /* Extra height for vertical scrolling */
+    }
+    .sticky-parent {
+      width: 100%;
+      height: 100vh; /* Full viewport height */
+      position: relative;
+    }
+    .sticky {
+      position: -webkit-sticky; /* For Safari */
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .scroll-section {
+      display: flex;
+      position: absolute;
+      top: 0;
+      width: calc(100vw * 10); /* Adjust based on number of cards */
+      height: 100vh;
+      transition: transform 0.3s ease-out;
+    }
+    .card-wrapper {
+      min-width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="section-wrapper">
+    <div class="sticky-parent">
+      <div class="sticky">
+        <div class="scroll-section" id="scroll-section">
+          <div class="card-wrapper">Card 1</div>
+          <div class="card-wrapper">Card 2</div>
+          <div class="card-wrapper">Card 3</div>
+          <div class="card-wrapper">Card 4</div>
+          <div class="card-wrapper">Card 5</div>
+          <div class="card-wrapper">Card 6</div>
+          <div class="card-wrapper">Card 7</div>
+          <div class="card-wrapper">Card 8</div>
+          <!-- Add more cards as needed -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const scrollSection = document.getElementById('scroll-section');
+    const cards = document.querySelectorAll('.card-wrapper');
+    const totalCards = cards.length;
+    const cardWidth = window.innerWidth;
+
+    let lastKnownScrollPosition = 0;
+    let ticking = false;
+
+    function transformScroll(scrollPos) {
+      const maxScroll = document.body.scrollHeight - window.innerHeight;
+      const scrollPercentage = scrollPos / maxScroll;
+      const totalScrollWidth = cardWidth * totalCards - window.innerWidth;
+      const transformX = scrollPercentage * totalScrollWidth;
+      scrollSection.style.transform = `translateX(-${transformX}px)`;
+
+      // Stop sticky behavior when the last card is fully revealed
+      const stickyElement = scrollSection.parentElement;
+      const maxStickyScroll = cardWidth * (totalCards - 1);
+      if (transformX >= maxStickyScroll) {
+        stickyElement.style.position = 'relative';
+      } else {
+        stickyElement.style.position = 'sticky';
+      }
+    }
+
+    window.addEventListener('scroll', () => {
+      lastKnownScrollPosition = window.scrollY;
+
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          transformScroll(lastKnownScrollPosition);
+          ticking = false;
+        });
+
+        ticking = true;
+      }
+    });
+  </script>
+</body>
+</html>

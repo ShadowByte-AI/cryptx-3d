@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<!-- This site was created in Webflow. https://webflow.com --><!-- Last Published: Wed Jun 26 2024 12:55:27 GMT+0000 (Coordinated Universal Time) -->
+<html data-wf-domain="demo-site-1-d9cb71.webflow.io" data-wf-page="667a7c2e3021cf4ea1b80a9d"
+    data-wf-site="667a7c2d3021cf4ea1b80a0c">
+
+<head>
+    <meta charset="utf-8" />
+    <title>CryptX - Your Bridge to  Web3</title>
+    <meta
+        content="Iridescent.AI is a fictional AI companion product, created as a demo for the Spline + Webflow integration. The name, logo, copy, and any assets included are fictional and hold no relationship with any real business."
+        name="description" />
+    <meta
+        content="https://cdn.prod.website-files.com/65cd46e4a1caef9c8158f97f/65cf65b94de6603635546882_iridescent-ai-opengraph.webp"
+        property="og:image" />
+    <meta
+        content="https://cdn.prod.website-files.com/65cd46e4a1caef9c8158f97f/65cf65b94de6603635546882_iridescent-ai-opengraph.webp"
+        property="twitter:image" />
+
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Webflow" name="generator" />
+    <!-- <link
+        href="https://cdn.prod.website-files.com/667a7c2d3021cf4ea1b80a0c/css/demo-site-1-d9cb71.webflow.399b8aa4a.css"
+        rel="stylesheet" type="text/css" /> -->  
+    <link
+        href="style.css"
+        rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+    <script
+        type="text/javascript">WebFont.load({ google: { families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic", "Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic", "Exo:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"] } });</script>
+    <script
+        type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
+    <link href="https://cdn.prod.website-files.com/667a7c2d3021cf4ea1b80a0c/667a7c2e3021cf4ea1b80aa8_favicon.svg"
+        rel="shortcut icon" type="image/x-icon" />
+    <link href="https://cdn.prod.website-files.com/65cd46e4a1caef9c8158f97f/65cf66b93deb77d305586f44_webclip.jpg"
+        rel="apple-touch-icon" />
+    <style>
+        html.lenis {
+            height: auto;
+        }
+
+        .lenis.lenis-smooth {
+            scroll-behavior: auto;
+        }
+
+        .lenis.lenis-smooth [data-lenis-prevent] {
+            overscroll-behavior: contain;
+        }
+
+        .lenis.lenis-stopped {
+            overflow: hidden;
+        }
+
+        .lenis.lenis-scrolling iframe {
+            pointer-events: none;
+        }
+
+
+        /* Hide scrollbar for WebKit browsers */
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Ensure scrolling functionality */
+        .scroll-hidden {
+            -ms-overflow-style: none;
+            /* IE and Edge */
+            scrollbar-width: none;
+            /* Firefox */
+            overflow: auto;
+            /* Ensure overflow property is set */
+        }
+    </style>
+    <style>
+        .loading {
+            display: none;
+        }
+    </style>
+
+    <!-- style for horizontal scrolling cards starts -->
+    <style>
+                                    .card-wrapper{
+                                        transition: filter 0.4s ease-in-out;
+                                    }
+                                        .card {
+                                        /* width: 20rem;
+                                        height: 25rem; */
+                                        /* aspect-ratio: 16/9; */
+                                        border-radius: 20px;
+                                        /* overflow: hidden; */
+                                        cursor: pointer;
+                                        position: relative;
+                                        color: #f0f0f0;
+                                        box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+                                        font-family: 'Montserrat', sans-serif ;
+                                        opacity: 1;
+                                        transition: opacity 0.3s ease; /* Optional: Smooth transition effect */
+                                        }
+                                        .card img {
+                                        position: absolute;
+                                        object-fit: cover;
+                                        width: 100%;
+                                        height: 100%;
+                                        top: 0;
+                                        left: 0;
+                                        opacity: 1;
+                                        border-radius: 20px;
+                                        transition: all 1s ease-in-out;
+                                        }
+                                        .card h2 {
+                                        position: absolute;
+                                        inset: auto auto 30px 30px;
+                                        margin: 0;
+                                        transition: inset 0.3s 0.3s ease-out;
+                                        font-family: "Exo", sans-serif;
+                                        font-weight: normal;
+                                        font-size: 2rem;
+                                        text-transform: uppercase;
+                                        z-index: 1;
+                                        /* font-weight: bold; */
+                                        background: linear-gradient(45deg, #bdc3c7, #7f8c8d, #bdc3c7);
+                                        background: linear-gradient(45deg, #bdc3c7, #bdc3c7 40%, #7f8c8d);
+  -webkit-background-clip: text; /* For Safari/Chrome */
+  background-clip: text;
+  color: transparent;
+                                        }
+
+                                        
+                                        .card p, .card a {
+                                        position: absolute;
+                                        opacity: 0;
+                                        max-width: 80%;
+                                        transition: opacity 0.3s ease-out;
+                                        z-index: 1;
+                                        font-size: 1.25rem;
+                                        }
+                                        .card p {
+                                        inset: auto auto 80px 30px;
+                                        }
+                                        .card a {
+                                        inset: auto auto 40px 30px;
+                                        color: inherit;
+                                        text-decoration: none;
+                                        }
+                                        .card:hover h2 {
+                                        inset: auto auto 185px 30px;
+                                        transition: inset 0.3s ease-out;
+                                        }
+                                        .card:hover p, .card:hover a {
+                                        opacity: 1;
+                                        transition: opacity 0.5s 0.1s ease-in;
+                                        }
+                                        .card:hover img {
+                                        transition: opacity 0.3s ease-in;
+                                        opacity: 1;
+                                        /* -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #00000057, #00000022);  
+                                        -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4)); */
+                                        }
+                                        .material-symbols-outlined {
+                                        vertical-align: middle;
+                                        }
+
+
+    /* .track-flex:hover > :not(:hover){
+        filter: brightness(0.7);
+        transition: filter 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    .track-flex:hover > :hover{
+        opacity: 1;
+        filter: brightness(1.5);
+        transition: filter 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+    }    */
+                                        .card::after {
+                                            content: '';
+                                            display: inline-block;
+                                            width: 100%;
+                                            height: 100%;
+                                            background-color: #00000069;
+                                            background: linear-gradient(to top, #0000006d 20%, transparent 100%);
+                                            position: relative;
+                                            top: 0;
+                                            left: 0;
+                                            bottom: 0rem;
+                                            z-index: 0;
+                                            border-radius: 10px;
+                                            transition-duration: 0.5s;
+                                        }
+                                        .card:hover::after{
+                                            background-color: #00000036;
+                                            backdrop-filter: blur(6px);
+                                        }
+    </style> 
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const cardWrappers = document.querySelectorAll('.card-wrapper');
+
+        cardWrappers.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                cardWrappers.forEach(otherCard => {
+                    if (otherCard !== card) {
+                        otherCard.style.filter = 'blur(2px) brightness(0.75)';
+                        // otherCard.style.filter = 'brightness(0.5)';
+                    } else {
+                        otherCard.style.filter = 'brightness(1.5)';
+                    }
+                });
+            });
+
+            card.addEventListener('mouseleave', () => {
+                cardWrappers.forEach(otherCard => {
+                    otherCard.style.filter = 'blur(0) brightness(1)';
+                    // otherCard.style.filter = 'brightness(1)';
+                });
+            });
+        });
+    });
+</script>
+        <!-- style for horizontal scrolling cards ends -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+</head>
+
+<body>
+    <main data-w-id="d68430be-f811-d834-b621-c0c8fdfe5ba5" class="page-wrapper">
+        <header class="header">
+            <div class="page-padding">
+                <div class="grid-8cols"><a id="w-node-_7a332376-f4e8-d93e-ac01-2388d2d6b33b-a1b80a9d" href="#"
+                        class="logo w-inline-block"><svg xmlns="http://www.w3.org/2000/svg" width="100%"
+                            viewBox="0 0 171 17" fill="none" class="logo-img">
+                            <path d="M0.439941 17V0.248026H3.00794V17H0.439941Z" fill="currentColor"></path>
+                            <path
+                                d="M17.5174 2.76802V6.05603C17.5174 7.47203 16.3654 8.62403 14.9494 8.62403V11H7.24544V17H4.67744V2.76802C4.67744 1.35203 5.82944 0.200025 7.24544 0.200025H14.9494C16.3654 0.200025 17.5174 1.35203 17.5174 2.76802ZM7.24544 2.60003V8.60003H14.9494V2.60003H7.24544ZM17.5174 13.568V17H14.9494V11C16.3654 11 17.5174 12.152 17.5174 13.568Z"
+                                fill="currentColor"></path>
+                            <path d="M19.204 17V0.248026H21.772V17H19.204Z" fill="currentColor"></path>
+                            <path
+                                d="M26.0335 0.200025H33.7375C35.1535 0.200025 36.3055 1.35203 36.3055 2.76802V14.432C36.3055 15.848 35.1535 17 33.7375 17H26.0335V14.6H33.7375V2.60003H26.0335V0.200025ZM23.4415 12.032V5.16803C23.4415 3.75203 24.5935 2.60003 26.0095 2.60003V14.6C24.5935 14.6 23.4415 13.448 23.4415 12.032Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M49.5595 0.200025V2.60003H40.5595V7.37603C39.1435 7.37603 37.9915 6.22403 37.9915 4.80803V2.74403C37.9915 1.32802 39.1435 0.176025 40.5595 0.176025V0.200025H49.5595ZM48.9355 7.37603V9.80003H40.5595V7.37603H48.9355ZM37.9915 14.432V12.368C37.9915 10.952 39.1435 9.80003 40.5595 9.80003V14.6H49.5595V17H40.5595C39.1435 17 37.9915 15.848 37.9915 14.432Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M63.589 0.200025V2.62403H53.797V7.40003H51.229V2.76802C51.229 1.35203 52.381 0.200025 53.797 0.200025H63.589ZM53.797 7.40003H61.645C62.989 7.40003 64.069 8.48003 64.069 9.82403V14.432C64.069 15.848 62.917 17 61.501 17H51.709V14.624H61.501V9.82403H53.797V7.40003Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M70.7476 0.200025H77.8036V2.60003H68.3236C68.3236 1.28003 69.4036 0.200025 70.7476 0.200025ZM65.7556 14.408V2.60003H68.3236V14.6H77.8036V17H68.3236V16.976C66.9076 16.976 65.7556 15.824 65.7556 14.408Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M91.0533 0.200025V2.60003H82.0533V7.37603C80.6373 7.37603 79.4853 6.22403 79.4853 4.80803V2.74403C79.4853 1.32802 80.6373 0.176025 82.0533 0.176025V0.200025H91.0533ZM90.4293 7.37603V9.80003H82.0533V7.37603H90.4293ZM79.4853 14.432V12.368C79.4853 10.952 80.6373 9.80003 82.0533 9.80003V14.6H91.0533V17H82.0533C80.6373 17 79.4853 15.848 79.4853 14.432Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M105.539 14.6V0.176025H108.107V14.408C108.107 15.824 106.955 16.976 105.539 16.976V17H101.699V14.6H105.539ZM101.699 2.74403V14.576H99.1308V2.57603H95.2908V17H92.7228V2.74403C92.7228 1.30403 93.8748 0.200025 95.2908 0.200025H99.1308C100.547 0.200025 101.699 1.30403 101.699 2.74403Z"
+                                fill="currentColor"></path>
+                            <path
+                                d="M109.061 0.200025H111.821C113.141 0.200025 114.197 1.25603 114.197 2.57603V2.60003H109.061V0.200025ZM116.765 2.60003C116.765 1.28003 117.845 0.200025 119.165 0.200025H121.901V2.60003H116.765ZM114.197 17V2.60003H116.765V17H114.197Z"
+                                fill="currentColor"></path>
+                            <path d="M123.334 17V14.6H125.902V17H123.334Z" fill="currentColor"></path>
+                            <path
+                                d="M138.324 8.60003V2.60003H140.892V17H138.324V11H130.62V17H128.052V2.76802C128.052 1.35203 129.204 0.200025 130.62 0.200025H138.324V2.60003H130.62V8.60003H138.324Z"
+                                fill="currentColor"></path>
+                            <path d="M142.579 17V0.248026H145.147V17H142.579Z" fill="currentColor"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M153.147 8.5C157.841 8.5 161.647 4.69442 161.647 0C156.953 0 153.147 3.80558 153.147 8.5ZM161.647 0C166.341 0 170.147 3.80558 170.147 8.5C165.453 8.5 161.647 4.69442 161.647 0ZM170.147 8.5C170.147 13.1944 166.341 17 161.647 17C161.647 12.3056 165.453 8.5 170.147 8.5ZM161.647 17C161.647 12.3056 157.841 8.5 153.147 8.5C153.147 13.1944 156.953 17 161.647 17Z"
+                                fill="currentColor"></path>
+                        </svg></a>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="spline-scene-wrapper">
+            <div class="spline-scene" data-w-id="a694e522-e0ec-0f4e-fd88-a27b4074fb22" data-animation-type="spline"
+                data-spline-url="https://prod.spline.design/vJXoSpt0B2TvAmux/scene.splinecode"><canvas></canvas></div>
+            <div class="spline-scene-overlay"></div>
+        </div>
+        <section class="section hero">
+            <div class="page-padding">
+                <div class="hero-container">
+                    <!-- <div id="w-node-c310fdb6-2dd2-db74-7e65-fc4d2d8c1089-a1b80a9d" class="grid-8cols">
+                        <div id="w-node-_14931478-e55d-4116-d54c-7f03f16e8e41-a1b80a9d" class="hero-subtitle-wrapper">
+                            <div id="w-node-_1272fedf-85ba-cd6d-3a0d-31b8cafe0dd5-a1b80a9d"
+                                style="-webkit-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                class="hero-subtitle _01">Delivering Q4 2024</div>
+                        </div>
+                        <div id="w-node-_9264b462-ea8c-1aca-5036-4e80ce511782-a1b80a9d" class="hero-subtitle-wrapper">
+                            <div id="w-node-_0f49a905-d6ee-e765-c5f9-bc979299696a-a1b80a9d"
+                                style="-webkit-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                class="hero-subtitle _02">Limited Units</div>
+                        </div>
+                        <div id="w-node-_51403de6-f2b9-e02a-059c-c7e4c8c689d2-a1b80a9d" class="hero-subtitle-wrapper">
+                            <div id="w-node-bef9d86a-20eb-1868-6611-c54268172391-a1b80a9d"
+                                style="-webkit-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                class="hero-subtitle _03">$999</div>
+                        </div>
+                    </div> -->
+                    <h1 id="w-node-f44176b1-2c19-165d-0c15-28413cb0feac-a1b80a9d" class="hero-title"><span
+                            class="hero-title-top">
+                            <div class="hero-title-word-wrapper"><span
+                                    style="-webkit-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                    class="hero-title-word _01">Your </span></div>
+                            <div class="hero-title-word-wrapper"><span
+                                    style="-webkit-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                    class="hero-title-word _02">Digital</span></div>
+                            <div class="hero-title-word-wrapper"><span
+                                    style="-webkit-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                    class="hero-title-word _03">Companion</span></div>
+                        </span><span class="hero-title-bottom">
+                            <div class="hero-title-line-wrapper"><svg
+                                    style="-webkit-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(null) rotateZ(180deg) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(null) rotateZ(180deg) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(null) rotateZ(180deg) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(null) rotateZ(180deg) skew(0, 0);transform-style:preserve-3d"
+                                    xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24" fill="none"
+                                    class="hero-title-line-logo">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M0 12C6.62742 12 12 6.62742 12 0C5.37258 0 0 5.37258 0 12ZM12 0C18.6274 0 24 5.37258 24 12C17.3726 12 12 6.62742 12 0ZM24 12C24 18.6274 18.6274 24 12 24C12 17.3726 17.3726 12 24 12ZM12 24C12 17.3726 6.62742 12 0 12C0 18.6274 5.37258 24 12 24Z"
+                                        fill="currentColor"></path>
+                                </svg>
+                                <div style="-webkit-transform:translate3d(0, 0, 0) scale3d(0, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                    class="hero-title-line"></div>
+                            </div>
+                            <div class="hero-title-word-wrapper"><span
+                                    style="-webkit-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+                                    class="hero-title-word _04">evolved</span></div>
+                        </span></h1>
+                </div>
+            </div>
+        </section>
+        <section data-w-id="d50b9f52-c8cd-23af-69d7-f4e9465a1245" class="section footer">
+            <div id="w-node-_802d549b-042c-1c88-9e9e-496411681167-a1b80a9d" class="marquee-reveal-wrapper">
+                <div id="w-node-_420326ff-0926-19a5-d5a5-d40d786c7dc3-a1b80a9d"
+                    data-w-id="420326ff-0926-19a5-d5a5-d40d786c7dc3" class="marquee-wrapper">
+                    <div class="marquee-el">blockchain revolution</div>
+                    <div class="marquee-el">blockchain revolution</div>
+                    <div class="marquee-el">blockchain revolution</div>
+                </div>
+            </div>
+            <div id="w-node-ce1d033d-9a54-d98d-6bf0-f789425570e6-a1b80a9d" class="page-padding">
+                <div class="grid-8cols">
+                    <p id="w-node-bf5a1609-6628-f902-3f17-bf4ad28cb4fc-a1b80a9d" class="paragraph">Blockchain technology
+                        is a transformative force that spreads trust across industries by creating transparent,
+                        immutable, and decentralized systems. By eliminating the need for intermediaries and providing a
+                        secure, tamper-proof ledger, blockchain instills confidence in transactions, data integrity, and
+                        digital interactions, revolutionizing how trust is established and maintained.</p>
+                    <h2 id="w-node-bed51bda-7bad-6586-2b2e-11a99f58d89e-a1b80a9d" class="footer-shipping-title"><span
+                            class="hero-title-word-wrapper"><span
+                                class="shipping-title-small">blockchain</span></span><span
+                            class="hero-title-word-wrapper"><span class="shipping-title-big">AI powered</span></span>
+                    </h2>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="w-embed">
+        <style>
+            html {
+                font-size: 14px;
+            }
+
+            @media screen and (min-width: 768px) {
+                html {
+                    font-size: 15px;
+                }
+            }
+
+            @media screen and (min-width: 992px) {
+                html {
+                    font-size: 0.9vw;
+                }
+            }
+
+            .overflow-x-clip {
+                overflow-x: clip;
+            }
+        </style>
+    </div>
+    <div data-w-id="dd8d89da-355f-c3ad-2e30-de014c014f30" class="load-trigger"></div>
+
+
+<style>
+    .block-wrapper{
+        height: 400vh;
+        position: relative;
+        
+    }
+    .block-animation{
+        position: sticky;
+        top: 0;
+        background-image: linear-gradient(to top, #0703ff, rgba(7, 3, 255, 0) 59%);
+        background-image: linear-gradient(to top, #4c55ff, rgba(7, 3, 255, 0) 59%);
+    }
+    .animation-container{
+         
+    }
+    .block-hero {
+    height: 100vh;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+    padding: 5vw;
+    display: flex;
+    position: absolute;
+    top: -27%;
+    z-index: -1;
+  }
+  .block-heading {
+    z-index: 1;
+    position: relative;
+    top: 5vw; /* Adjust as needed */
+        right: 5vw; /* Adjust as needed */
+        font-size: 10rem;
+        font-family: 'Exo',sans-serif;
+        font-weight: bold;
+  }
+  .block-para {
+    z-index: 5;
+    position: absolute;
+    bottom: -5vw; /* Adjust as needed */
+        right: -8vw; /* Adjust as needed */
+        max-width: 80%; 
+    font-size: 1.4rem;
+  }
+</style>
+
+<div class="block-wrapper">
+    <div class="block-animation">
+
+        <div class="animation-container">
+            <script type="module" src="https://unpkg.com/@splinetool/viewer@1.7.9/build/spline-viewer.js"></script>
+            <spline-viewer loading-anim-type="spinner-small-dark" url="https://prod.spline.design/bmUJVpqhWJxVG3tN/scene.splinecode"></spline-viewer>
+        </div>    
+        <div class="block-hero">
+            <h1 class="block-heading">Web3<br/><br/><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;World</h1>
+            <p class="block-para">Where blockchain innovation meets limitless possibilities. Explore decentralized applications, smart contracts, and cutting-edge technologies driving the next generation of the internet.</p>
+        </div>
+    </div>
+
+</div>
+
+<!-- <div class="threed_wrapper">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.8.0/build/spline-viewer.js"></script>
+    <spline-viewer url="https://prod.spline.design/m0XPuhQDf5y8zbWT/scene.splinecode"></spline-viewer>
+</div> -->
+
+
+
+
+    <!-- <div class="section-spacer" style="height: 0vh;"></div> -->
+
+    <!-- <div class="loading">
+        <div data-w-id="fb9d9d08-93b7-a071-329a-99b355ebe966"
+            style="-webkit-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 0, 0) scale3d(0, 0, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)"
+            class="loading-icon-scale"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 24 24"
+                fill="none" class="loading-icon">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0 12C6.62742 12 12 6.62742 12 0C5.37258 0 0 5.37258 0 12ZM12 0C18.6274 0 24 5.37258 24 12C17.3726 12 12 6.62742 12 0ZM24 12C24 18.6274 18.6274 24 12 24C12 17.3726 17.3726 12 24 12ZM12 24C12 17.3726 6.62742 12 0 12C0 18.6274 5.37258 24 12 24Z"
+                    fill="currentColor"></path>
+            </svg></div>
+    </div> -->
+    <section class="outersection">
+        <div class="section-spacer"></div>  
+        <section class="section-wrapper">
+            <div class="section-height">
+                <div class="sticky-element">
+                    <div class="track">
+                        <div class="track-flex">
+                            <div class="card-wrapper">
+                                <div class = "card">
+                                    <img src="https://cdn.pixabay.com/photo/2022/11/05/07/13/blockchain-7571280_640.jpg" alt="">
+                                    <div class="card-content">
+                                    <h2>
+                                        Blockchain Development  
+                                    </h2>
+                                    <p>
+                                        Customized blockchain solutions to revolutionize your business processes with enhanced security and efficiency.
+                                    </p>
+                                    <a href="#" class="button">
+                                        Find out more 
+                                        <span class="material-symbols-outlined">
+                                        arrow_right_alt
+                                        </span>
+                                    </a>
+                                    </div>
+                                </div>
+                    </div>
+                
+                    <div class="card-wrapper">
+                                <div class = "card">
+                                    <img src="https://s1.1zoom.me/big0/360/Coins_Closeup_ethereum_eth_Violet_587164_1365x1024.jpg" alt="">
+                                    <div class="card-content">
+                                    <h2>
+                                        Token Development
+                                    </h2>
+                                    <p>
+                                        Create versatile and secure tokens tailored to your project's unique requirements and objectives.
+                                    </p>
+                                    <a href="#" class="button">
+                                        Find out more 
+                                        <span class="material-symbols-outlined">
+                                        arrow_right_alt
+                                        </span>
+                                    </a>
+                                    </div>
+                                </div>
+                    </div>
+                
+                    <div class="card-wrapper">
+                                <div class = "card">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLveLVD-nNoGpwfhTuLszqxxc8kYOnO4sGaQ&s" alt="">
+                                    <div class="card-content">
+                                    <h2>
+                                        NFT Development 
+                                    </h2>
+                                    <p>
+                                        Transform digital assets into unique, tradeable NFTs with our innovative development services.
+                                    </p>
+                                    <a href="#" class="button">
+                                        Find out more 
+                                        <span class="material-symbols-outlined">
+                                        arrow_right_alt
+                                        </span>
+                                    </a>
+                                    </div>
+                                </div>
+                    </div>
+                
+                    <div class="card-wrapper">
+                            <div class = "card">
+                                <img src="https://miro.medium.com/v2/resize:fit:1000/1*tKabJo0mCe5BIvqhCOlCPw.jpeg" alt="">
+                                <div class="card-content">
+                                    <h2>
+                                    RWA Tokenisation
+                                    </h2>
+                                    <p>
+                                    Convert real-world assets into blockchain-based tokens, enhancing liquidity and accessibility while maintaining regulatory compliance.
+                                    </p>
+                                    <a href="#" class="button">
+                                    Find out more 
+                                    <span class="material-symbols-outlined">
+                                        arrow_right_alt
+                                    </span>
+                                    </a>
+                                </div>
+                            </div>
+                    </div>
+                
+                    <div class="card-wrapper">
+                            <div class = "card">
+                                <img src="https://imageio.forbes.com/specials-images/imageserve/642445004586b4330e81b689//960x0.jpg?height=406&width=711&fit=bounds" alt="">
+                                <div class="card-content">
+                                    <h2>
+                                    Smart Contract Audit
+                                    </h2>
+                                    <p>
+                                    Ensure the integrity and security of your smart contracts with our comprehensive auditing services.
+                                    </p>
+                                    <a href="#" class="button">
+                                    Find out more 
+                                    <span class="material-symbols-outlined">
+                                        arrow_right_alt
+                                    </span>
+                                    </a>
+                                </div>
+                            </div>
+                    </div>
+                
+                    <div class="card-wrapper">
+                            <div class = "card">
+                                <img src="https://w0.peakpx.com/wallpaper/744/907/HD-wallpaper-what-are-flag-patterns-on-forex-charts.jpg" alt="">
+                                <div class="card-content">
+                                    <h2>
+                                    Custom Trading Bot
+                                    </h2>
+                                    <p>
+                                    Develop bespoke trading bots tailored to your strategy, automating trades with advanced algorithms for optimized performance and profitability.
+                                    </p>
+                                    <a href="#" class="button">
+                                    Find out more 
+                                    <span class="material-symbols-outlined">
+                                        arrow_right_alt
+                                    </span>
+                                    </a>
+                                </div>
+                            </div>
+                    </div>
+                
+                    <div class="card-wrapper">
+                            <div class = "card">
+                                <img src="https://i.pinimg.com/736x/2f/3c/97/2f3c9722a9f869280b3b95774bfe0a58.jpg" alt="">
+                                <div class="card-content">
+                                <h2>
+                                    DApp Development
+                                </h2>
+                                <p>
+                                    Build decentralized applications that offer enhanced security, transparency, and functionality.
+                                </p>
+                                <a href="#" class="button">
+                                    Find out more 
+                                    <span class="material-symbols-outlined">
+                                    arrow_right_alt
+                                    </span>
+                                </a>
+                                </div>
+                            </div>
+                    </div>
+                
+                    <div class="card-wrapper">
+                        <div class = "card">
+                            <img src="https://cdn.prod.website-files.com/64e857845a559e67ce25969c/65129d75b6d81a3be73c992f_crypto-wallets.png" alt="">
+                            <div class="card-content">
+                                <h2>
+                                Wallet Development
+                                </h2>
+                                <p>
+                                Develop secure and user-friendly cryptocurrency wallets for seamless transactions and storage.
+                                </p>
+                                <a href="#" class="button">
+                                Find out more 
+                                <span class="material-symbols-outlined">
+                                    arrow_right_alt
+                                </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="card-wrapper">
+                        <div class = "card">
+                            <img src="https://assets.cmcmarkets.com/images/img_platform_crypto_charting_large.png" alt="">
+                            <div class="card-content">
+                            <h2>
+                                DEX and CEX Launching 
+                            </h2>
+                            <p>
+                                Launch your cryptocurrency on top decentralized (DEX) and centralized (CEX) exchanges with ease.
+                            </p>
+                            <a href="#" class="button">
+                                Find out more 
+                                <span class="material-symbols-outlined">
+                                arrow_right_alt
+                                </span>
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+<!-- <div class="section-spacer"></div> -->
+
+
+
+<!-- TradingView Widget BEGIN -->
+ <!-- <div class="crypto-container">
+
+<div class="tradingview-widget-container">
+    <div class="tradingview-widget-container__widget"></div>
+    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+    {
+    "width": "100%",
+    "height": "100%",
+    "defaultColumn": "overview",
+    "screener_type": "crypto_mkt",
+    "displayCurrency": "USD",
+    "colorTheme": "dark",
+    "locale": "en",
+    "isTransparent": true
+  }
+    </script>
+  </div>
+            
+ </div>
+ <style>
+    .crypto-container{
+        width: 100vw;
+        height: 100vh;
+        padding: 3rem 4rem;
+        display: grid;
+        place-items: center;
+    }
+ </style> -->
+  <!-- TradingView Widget END -->
+
+  <style>
+    .trade-cryptos h2{
+        text-align: center;
+        font-family: "Exo", sans-serif;
+        font-size: 3rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        z-index: 1;
+        /* font-weight: bold; */
+        background: linear-gradient(45deg, #bdc3c7, #7f8c8d, #bdc3c7);
+        background: linear-gradient(45deg, #bdc3c7, #bdc3c7 40%, #7f8c8d);
+        background: linear-gradient(135deg, #e5e4e2, #bfbfbf, #e5e4e2, #c0c0c0, #e5e4e2);
+        background: linear-gradient(175deg, #2c3e50, #4a4a4a, #7f8c8d, #4a4a4a, #2c3e50);
+        -webkit-background-clip: text; /* For Safari/Chrome */
+        background-clip: text;
+        color: transparent;
+    }
+.tcard-wrapper{
+    overflow: hidden;
+    margin: 2rem 1rem;
+}
+.tcard-container{
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 5rem;
+flex-wrap: wrap;
+}
+
+
+.tcard-container .tcard img{
+    filter: grayscale(1);
+}
+
+    .tcard {
+  flex: 0 0 auto;
+  width: 280px;
+  height: 400px;
+  background: #101010;
+  border-radius: 20px;
+  ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: linear-gradient(
+        145deg, 
+        #131313,   /* Start fully dark */
+        #0e0e0e,   /* Transition to slightly less dark */
+        #1d1d1d,   /* Dark grey */
+        #272727 50%, /* Shiny central line */
+        #222222,   /* Dark grey */
+        #1a1a1a,   /* Transition to slightly less dark */
+        #131313    /* End fully dark */
+    );
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: 0.5s ease-in-out;
+}
+
+.img {
+  height: 30%;
+  position: absolute;
+  transition: 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.textBox {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  transition: 0.2s ease-in-out;
+  z-index: 2;
+}
+
+.textBox > .text {
+  font-weight: bold;
+}
+
+.textBox > .head {
+  font-size: 2rem;
+}
+
+.textBox > .price {
+  font-size: 2rem;
+}
+
+.textBox > span {
+  font-size: 1.5rem;
+  color: lightgrey;
+}
+
+.tcard:hover > .textBox {
+  opacity: 1;
+}
+
+.tcard:hover > .img {
+  height: 65%;
+  filter: blur(7px);
+  animation: anim 3s infinite;
+  transition: 0.5s ease-in-out;
+}
+
+@keyframes anim {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.tcard:hover {
+  transform: scale(1.04) rotate(-1deg);
+}
+
+.tBtn {
+  width: 140px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right,#77530a,#ffd277,#77530a,#77530a,#ffd277,#77530a);
+  background-size: 250%;
+  background-position: left;
+  color: #ffd277;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition-duration: 1s;
+  overflow: hidden;
+}
+
+.tBtn::before {
+  position: absolute;
+  content: "TRADE NOW";
+  color: #ffd277;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 97%;
+  height: 90%;
+  border-radius: 8px;
+  transition-duration: 1s;
+  background-color: rgba(0, 0, 0, 0.842);
+  background-size: 200%;
+}
+
+.tBtn:hover {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.tBtn:hover::before {
+  background-position: right;
+  transition-duration: 1s;
+}
+
+.tBtn:active {
+  transform: scale(0.95);
+}
+  </style>
+  <div class="section-spacer"></div>
+  <div class="trade-cryptos">
+    <h2>Trade Top Cryptos</h2>
+
+<div class="tcard-wrapper">
+    <div class="tcard-container">
+        <div class="tcard">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/800px-Bitcoin.svg.png" alt="" class="img">
+            <div class="textBox">
+              <p class="text head">Bitcoin</p>
+              <span>MKT Cap: 1.215T</span>
+              <p class="text price">1.654,34$</p>
+              <button class="tBtn"></button>
+            </div>
+        </div>
+        <div class="tcard">
+            <img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" alt="" class="img">
+            <div class="textBox">
+              <p class="text head">Ethereum</p>
+              <span>MKT Cap: 413.9 B</span>
+              <p class="text price">1.654,34$</p>
+              <button class="tBtn"></button>
+            </div>
+        </div>
+        <div class="tcard">
+            <img src="https://seeklogo.com/images/X/xrp-xrp-logo-CBBF77A5CF-seeklogo.com.png" alt="" class="img">
+            <div class="textBox">
+              <p class="text head">Ripple</p>
+              <span>MKT Cap: 26B</span>
+              <p class="text price">1.654,34$</p>
+              <button class="tBtn"></button>
+            </div>
+        </div>
+        <div class="tcard">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b9/Solana_logo.png" alt="" class="img">
+            <div class="textBox">
+              <p class="text head">Solana</p>
+              <span>MKT Cap: 68.5B</span>
+              <p class="text price">1.654,34$</p>
+              <button class="tBtn"></button>
+            </div>
+        </div>
+        <!-- <div class="tcard">
+            <img src="https://cdn.worldvectorlogo.com/logos/tether.svg" alt="" class="img">
+            <div class="textBox">
+              <p class="text head">USDt</p>
+              <span>MKT Cap: 26B</span>
+              <p class="text price">1.654,34$</p>
+              <button class="tBtn"></button>
+            </div>
+        </div> -->
+
+    </div>
+
+</div>
+
+<div class="section-spacer"></div>
+<div class="section-spacer"></div>
+  </div>
+
+  
+<style>
+    .information .content {
+        position: relative;
+    }
+    .information .content .image-wrapper{
+        position: absolute; 
+        z-index: -1;
+    width: 65%;
+    margin-top: -20%;
+    margin-right: -24%;
+    top: 0%;
+    bottom: auto;
+    left: auto;
+    right: 0%;
+    }
+
+    .metal-text{
+        font-family: "Exo", sans-serif;
+        font-size: 3rem;
+                                        font-weight: bold;
+                                        text-transform: uppercase;
+                                        z-index: 1;
+                                        /* font-weight: bold; */
+                                        background: linear-gradient(45deg, #bdc3c7, #7f8c8d, #bdc3c7);
+                                        background: linear-gradient(45deg, #bdc3c7, #bdc3c7 40%, #7f8c8d);
+
+
+
+  -webkit-background-clip: text; /* For Safari/Chrome */
+  background-clip: text;
+  color: transparent;
+    }
+
+    .iridescent-bg{
+        background: linear-gradient(135deg, #ff4e50 0%, #ff0066 20%, #c850c0 40%, #6a82fb 60%, #5a5aff 80%, #00d2ff 100%);
+    }
+</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<div class="information">
+    <div class="content">
+        <section class="bg-transparent">
+            <div class="container px-6 py-10 mx-auto">
+                <div class="lg:flex lg:items-center">
+                    <div class="w-full space-y-12 lg:w-1/2 ">
+                        <div>
+                            <h2 class="metal-text">A Crypto Service to Rely Upon</h2>
+        
+                            <div class="mt-2">
+                                <span class="iridescent-bg inline-block w-40 h-1 bg-blue-500 rounded-full"></span>
+                                <span class="iridescent-bg inline-block w-3 h-1 ml-1 bg-blue-500 rounded-full"></span>
+                                <span class="iridescent-bg inline-block w-1 h-1 ml-1 bg-blue-500 rounded-full"></span>
+                            </div>
+                        </div>
+        
+                        <div class="md:flex md:items-start md:-mx-4">
+                            <span class="iridescent-bg inline-block p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:text-white dark:bg-blue-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                                </svg>
+                            </span>
+        
+                            <div class="mt-4 md:mx-4 md:mt-0">
+                                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Comprehensive Token Development</h1>
+        
+                                <p class="mt-3 text-gray-500 dark:text-gray-300">
+                                    Our team excels in creating secure and scalable crypto tokens tailored to your specific requirements. Whether it's ERC20, BEP20, or any other standard, we ensure top-notch quality and compliance.
+                                </p>
+                            </div>
+                        </div>
+        
+                        <div class="md:flex md:items-start md:-mx-4">
+                            <span class="iridescent-bg p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:text-white dark:bg-blue-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                                </svg>
+                            </span>
+        
+                            <div class="mt-4 md:mx-4 md:mt-0">
+                                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Robust Security Audits</h1>
+        
+                                <p class="mt-3 text-gray-500 dark:text-gray-300">
+                                    Protect your assets with our thorough security audits. We meticulously examine smart contracts and blockchain protocols to identify and mitigate vulnerabilities, ensuring your project’s safety and integrity.
+                                </p>
+                            </div>
+                        </div>
+        
+                        <div class="md:flex md:items-start md:-mx-4">
+                            <span class="iridescent-bg p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:text-white dark:bg-blue-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
+                                </svg>
+                            </span>
+        
+                            <div class="mt-4 md:mx-4 md:mt-0">
+                                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Real-World Asset Tokenisation</h1>
+        
+                                <p class="mt-3 text-gray-500 dark:text-gray-300">
+                                    Unlock the potential of real-world assets by converting them into digital tokens. Our RWA tokenization service provides a bridge between physical and digital assets, enhancing liquidity and market reach.
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="md:flex md:items-start md:-mx-4">
+                            <span class="iridescent-bg p-2 text-blue-500 bg-blue-100 rounded-xl md:mx-4 dark:text-white dark:bg-blue-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
+                                </svg>
+                            </span>
+        
+                            <div class="mt-4 md:mx-4 md:mt-0">
+                                <h1 class="text-xl font-semibold text-gray-700 capitalize dark:text-white">Seamless Crypto Launching</h1>
+        
+                                <p class="mt-3 text-gray-500 dark:text-gray-300">
+                                    Experience hassle-free crypto launching with our end-to-end support. From initial token generation to listing on major exchanges (DEX & CEX), we handle everything, ensuring a smooth and successful launch.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- <div class="hidden lg:flex lg:items-center lg:w-1/2 lg:justify-center">
+                        <img class="w-[28rem] h-[28rem] object-cover xl:w-[34rem] xl:h-[34rem] rounded-full" src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=755&q=80" alt="">
+                    </div> -->
+                </div>
+        
+                <!-- <hr class="my-12 border-gray-200 dark:border-gray-700">
+        
+                <div class="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
+                    <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+                        <svg class="h-12 text-gray-500 fill-current dark:text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 266 100"><path fill="none" d="M0 0h266v100H0z"></path><path d="M140.021 49.597c-1.784 0-3.07.585-4.374 1.181v13.486c1.249.119 1.965.119 3.15.119 4.282 0 4.869-1.961 4.869-4.699v-6.441c0-2.022-.671-3.646-3.645-3.646zm-28.438-.736c-2.971 0-3.649 1.631-3.649 3.651v1.135h7.294v-1.135c0-2.02-.678-3.651-3.645-3.651zm-55.09 14.037c0 1.598.754 2.428 2.418 2.428 1.785 0 2.842-.582 4.145-1.18v-3.199h-3.903c-1.848 0-2.66.344-2.66 1.951zm111.191-13.301c-2.976 0-4.007 1.624-4.007 3.646v7.379c0 2.027 1.031 3.656 4.007 3.656 2.968 0 4.007-1.629 4.007-3.656v-7.379c-.001-2.022-1.04-3.646-4.007-3.646zM41.909 71.172h-8.748V49.998H28.79v-7.296h4.372V38.32c0-5.953 2.467-9.492 9.479-9.492h5.838v7.298H44.83c-2.73 0-2.91 1.02-2.91 2.923l-.011 3.652h6.61l-.773 7.296h-5.837v21.175zm29.897.055h-7.291l-.315-1.844c-3.329 1.844-6.3 2.143-8.26 2.143-5.347 0-8.193-3.572-8.193-8.512 0-5.828 3.321-7.908 9.262-7.908h6.047v-1.26c0-2.975-.341-3.848-4.916-3.848h-7.48l.731-7.296h8.176c10.038 0 12.239 3.171 12.239 11.203v17.322zm24.793-20.694c-4.537-.778-5.84-.949-8.023-.949-3.921 0-5.106.865-5.106 4.195v6.299c0 3.33 1.185 4.199 5.106 4.199 2.183 0 3.486-.174 8.023-.955v7.117c-3.974.891-6.563 1.125-8.751 1.125-9.392 0-13.125-4.939-13.125-12.074v-5.111c0-7.141 3.733-12.089 13.125-12.089 2.188 0 4.777.235 8.751 1.13v7.113zm27.376 8.957h-16.042v.588c0 3.33 1.186 4.199 5.106 4.199 3.524 0 5.675-.174 10.204-.955v7.117c-4.368.891-6.644 1.125-10.929 1.125-9.393 0-13.128-4.939-13.128-12.074v-5.844c0-6.243 2.771-11.356 12.396-11.356s12.393 5.054 12.393 11.356v5.844zm28.437.135c0 6.896-1.971 11.926-13.911 11.926-4.312 0-6.841-.379-11.6-1.111V31.02l8.745-1.459V43.35c1.89-.702 4.336-1.059 6.562-1.059 8.746 0 10.203 3.921 10.203 10.222v7.112zm28.033.15c0 5.949-2.456 11.719-12.732 11.719-10.281 0-12.783-5.77-12.783-11.719v-5.744c0-5.952 2.502-11.723 12.783-11.723 10.276 0 12.732 5.771 12.732 11.723v5.744zm28.014 0c0 5.949-2.459 11.719-12.733 11.719-10.281 0-12.783-5.77-12.783-11.719v-5.744c0-5.952 2.502-11.723 12.783-11.723 10.274 0 12.733 5.771 12.733 11.723v5.744zm28.749 11.397h-9.479l-8.017-13.383v13.383h-8.748V31.019l8.748-1.459v25.849l8.017-12.707h9.479l-8.752 13.867 8.752 14.603zm-41.512-21.575c-2.971 0-4.002 1.624-4.002 3.646v7.379c0 2.027 1.031 3.656 4.002 3.656 2.967 0 4.017-1.629 4.017-3.656v-7.379c0-2.022-1.05-3.646-4.017-3.646zm46.505 16.581c1.473 0 2.646 1.201 2.646 2.701 0 1.523-1.174 2.711-2.657 2.711-1.476 0-2.673-1.188-2.673-2.711 0-1.5 1.197-2.701 2.673-2.701h.011zm-.011.42c-1.187 0-2.158 1.021-2.158 2.281 0 1.283.972 2.291 2.169 2.291 1.198.012 2.155-1.008 2.155-2.279s-.957-2.293-2.155-2.293h-.011zm-.503 3.853h-.48v-3.014c.252-.035.492-.07.852-.07.456 0 .754.096.937.227.177.133.272.336.272.623 0 .398-.262.637-.585.734v.023c.263.049.442.287.503.73.07.469.143.648.19.746h-.503c-.071-.098-.144-.373-.204-.77-.07-.383-.264-.527-.648-.527h-.333v1.298zm0-1.668h.348c.394 0 .729-.145.729-.518 0-.264-.19-.527-.729-.527-.157 0-.266.012-.348.023v1.022z"></path></svg>
+                    </div>
+        
+                    <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+                        <svg class="h-10 text-gray-500 fill-current dark:text-gray-300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 316 60"><g transform="translate(9.259 4.552) scale(.4941)"><path d="M52.1 102.1V82.5c20.8 0 36.8-20.6 28.9-42.4-3-8.1-9.4-14.6-17.5-17.5-21.8-7.9-42.4 8.1-42.4 28.9H1.5c0-33.1 32-58.9 66.7-48.1 15.2 4.7 27.2 16.8 31.9 31.9 10.8 34.8-14.9 66.8-48 66.8z"></path><path d="M32.6 63h19.5v19.5H32.6zm-15 34.5v-15h15v15h-15zM5 70h12.6v12.5H5z" fill-rule="evenodd"></path><path d="M181.5 30.2c-5.8-4-13-6.1-21.4-6.1h-18.3v58.1h18.3c8.4 0 15.6-2.1 21.4-6.4 3.2-2.2 5.7-5.4 7.4-9.3s2.6-8.5 2.6-13.7c0-5.1-.9-9.7-2.6-13.6-1.7-3.8-4.2-6.9-7.4-9zm-29 3.8h5.8c6.4 0 11.7 1.3 15.7 3.7 4.4 2.7 6.7 7.8 6.7 15.1 0 7.6-2.3 12.9-6.7 15.8-3.8 2.5-9.1 3.8-15.6 3.8h-5.8V34z"></path><use xlink:href="#A"></use><path d="M199 41.3h10.3v41H199zm47.8 3.4c-3.1-2.8-6.6-4.4-10.3-4.4-5.7 0-10.4 2-14.1 5.8s-5.5 8.8-5.5 14.7c0 5.8 1.8 10.7 5.5 14.7 3.7 3.8 8.4 5.8 14.1 5.8 4 0 7.4-1.1 10.2-3.3v1c0 3.4-.9 6-2.7 7.9-1.8 1.8-4.3 2.7-7.4 2.7-4.8 0-7.7-1.9-11.4-6.8l-7 6.7.2.3c1.5 2.1 3.8 4.2 6.9 6.2s6.9 3 11.5 3c6.1 0 11.1-1.9 14.7-5.6 3.7-3.7 5.5-8.7 5.5-14.9V41.3h-10.1v3.4zm-2.7 24.2c-1.8 2-4.1 3-7.1 3s-5.3-1-7-3c-1.8-2-2.7-4.7-2.7-8s.9-6.1 2.7-8.1 4.1-3.1 7-3.1c3 0 5.3 1 7.1 3.1 1.8 2 2.7 4.8 2.7 8.1s-1 6-2.7 8zm21.6-27.6H276v41h-10.3z"></path><use xlink:href="#A" x="66.7"></use><path d="M298.6 30.3h-10.1v11.1h-5.9v9.4h5.9v17c0 5.3 1.1 9.1 3.2 11.3s5.8 3.3 11.1 3.3c1.7 0 3.4-.1 5-.2h.5v-9.4l-3.5.2c-2.5 0-4.1-.4-4.9-1.3s-1.2-2.7-1.2-5.4V50.7h9.6v-9.4h-9.6v-11zm57.9-6.2h10.3v58.1h-10.3zm114.4 43.5c-1.8 2.1-3.7 3.9-5.2 4.8-1.4.9-3.2 1.4-5.3 1.4-3 0-5.5-1.1-7.5-3.4s-3-5.2-3-8.7 1-6.4 2.9-8.6c2-2.3 4.4-3.4 7.4-3.4 3.3 0 6.8 2.1 9.8 5.6l6.8-6.5c-4.4-5.8-10.1-8.5-16.9-8.5-5.7 0-10.6 2.1-14.6 6.1s-6 9.2-6 15.3 2 11.2 6 15.3 8.9 6.1 14.6 6.1c7.5 0 13.5-3.2 17.5-9.1l-6.5-6.4zM513.2 47c-1.5-2-3.5-3.7-5.9-4.9-2.5-1.2-5.3-1.8-8.5-1.8-5.8 0-10.5 2.1-14 6.3-3.4 4.2-5.2 9.3-5.2 15.4 0 6.2 1.9 11.3 5.7 15.3 3.7 3.9 8.8 5.9 14.9 5.9 6.9 0 12.7-2.8 16.9-8.4l.2-.3-6.7-6.5c-.6.8-1.5 1.6-2.3 2.4-1 1-2 1.7-3 2.2-1.5.8-3.3 1.1-5.2 1.1-2.9 0-5.2-.8-7-2.5-1.7-1.5-2.7-3.6-2.9-6.2h27.3l.1-3.8c0-2.7-.4-5.2-1.1-7.6-.7-2.3-1.8-4.5-3.3-6.6zm-22.5 9.7c.5-2 1.4-3.6 2.7-4.9 1.4-1.4 3.2-2.1 5.4-2.1 2.5 0 4.4.7 5.7 2.1 1.2 1.3 1.9 2.9 2.1 4.8h-15.9zm62.1-12.3c-3.1-2.7-7.4-4-12.8-4-3.4 0-6.6.8-9.5 2.2-2.7 1.4-5.3 3.6-7 6.6l.1.1 6.6 6.3c2.7-4.3 5.7-5.8 9.7-5.8 2.2 0 3.9.6 5.3 1.7s2 2.6 2 4.4v2c-2.6-.8-5.1-1.2-7.6-1.2-5.1 0-9.3 1.2-12.4 3.6s-4.7 5.9-4.7 10.2c0 3.8 1.3 7 4 9.3 2.7 2.2 6 3.4 9.9 3.4s7.6-1.6 10.9-4.3v3.4h10.1V55.9c.2-4.9-1.4-8.8-4.6-11.5zm-18.3 22.2c1.2-.8 2.8-1.2 4.9-1.2 2.5 0 5.1.5 7.8 1.5v4C545 73 542 74 538.3 74c-1.8 0-3.2-.4-4.1-1.2s-1.4-1.7-1.4-3 .6-2.4 1.7-3.2zm62.7-21.4c-2.9-3.2-6.9-4.8-12-4.8-4.1 0-7.4 1.2-9.9 3.5v-2.5h-10.1v41h10.3V59.7c0-3.1.7-5.6 2.2-7.3 1.5-1.8 3.4-2.6 6.1-2.6 2.3 0 4.1.8 5.4 2.3 1.3 1.6 2 3.7 2 6.4v23.7h10.3V58.5c0-5.6-1.4-10.1-4.3-13.3zm-253.6-.8c-3.1-2.7-7.4-4-12.8-4-3.4 0-6.6.8-9.5 2.2-2.7 1.4-5.3 3.6-7 6.6l.1.1 6.6 6.3c2.7-4.3 5.7-5.8 9.7-5.8 2.2 0 3.9.6 5.3 1.7s2 2.6 2 4.4v2c-2.6-.8-5.1-1.2-7.6-1.2-5.1 0-9.3 1.2-12.4 3.6s-4.7 5.9-4.7 10.2c0 3.8 1.3 7 4 9.3 2.7 2.2 6 3.4 9.9 3.4s7.6-1.6 10.9-4.3v3.4h10.1V55.9c.1-4.9-1.5-8.8-4.6-11.5zm-18.3 22.2c1.2-.8 2.8-1.2 4.9-1.2 2.5 0 5.1.5 7.8 1.5v4c-2.2 2.1-5.2 3.1-8.9 3.1-1.8 0-3.2-.4-4.1-1.2s-1.4-1.7-1.4-3 .5-2.4 1.7-3.2zm78.9 16.5c-16.5 0-30-13.4-30-30s13.4-30 30-30c16.5 0 30 13.4 30 30s-13.5 30-30 30zm0-49.3c-10.7 0-19.4 8.7-19.4 19.4s8.7 19.4 19.4 19.4 19.4-8.7 19.4-19.4-8.7-19.4-19.4-19.4z"></path></g><defs><path d="M204.3 23.4c-1.8 0-3.3.6-4.5 1.8s-1.9 2.7-1.9 4.4c0 1.8.6 3.3 1.9 4.5 1.2 1.2 2.7 1.9 4.5 1.9s3.3-.6 4.5-1.9c1.2-1.2 1.9-2.8 1.9-4.5 0-1.8-.6-3.3-1.9-4.4-1.2-1.2-2.8-1.8-4.5-1.8z"></path></defs></svg>
+                    </div>
+        
+                    <div class="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+                        <svg class="h-8 mt-2 text-gray-500 fill-current dark:text-gray-300" viewBox="0 0 398 120" xmlns="http://www.w3.org/2000/svg"><g fill-rule="nonzero"><path d="M247.292 94.106C224.124 111.016 190.526 120 161.608 120c-40.544 0-77.046-14.822-104.673-39.476-2.164-1.936-.235-4.583 2.369-3.082 29.806 17.15 66.66 27.475 104.731 27.475 25.677 0 53.906-5.271 79.884-16.163 3.923-1.646 7.21 2.545 3.373 5.352"></path><path d="M256.533 82.534c-2.965-3.771-19.551-1.787-27.003-.897-2.254.277-2.605-1.692-.57-3.122 13.233-9.265 34.922-6.587 37.447-3.487 2.54 3.13-.666 24.802-13.073 35.147-1.91 1.59-3.718.744-2.877-1.357 2.782-6.952 9.04-22.505 6.076-26.284zM230.05 13.058V4.063c.015-1.378 1.04-2.29 2.291-2.283l40.493-.007c1.295 0 2.335.94 2.335 2.268v7.726c-.015 1.29-1.113 2.983-3.053 5.668l-20.97 29.843c7.78-.182 16.022.985 23.093 4.939 1.596.897 2.027 2.217 2.152 3.516v9.607c0 1.32-1.457 2.86-2.987 2.057-12.458-6.507-29-7.214-42.776.08-1.405.745-2.884-.765-2.884-2.086v-9.133c0-1.459.03-3.961 1.508-6.186l24.302-34.738h-21.162c-1.295 0-2.327-.927-2.342-2.276zM82.354 69.294H70.042c-1.171-.08-2.108-.956-2.203-2.072l.014-63.006c0-1.262 1.062-2.268 2.38-2.268L81.71 1.94c1.2.059 2.159.963 2.232 2.116v8.221h.234C87.163 4.326 92.8.613 100.39.613c7.708 0 12.539 3.713 15.98 11.664C119.361 4.326 126.14.613 133.393.613c5.175 0 10.804 2.123 14.251 6.893 3.916 5.311 3.111 12.993 3.111 19.755l-.015 39.764c0 1.255-1.061 2.262-2.379 2.262h-12.304c-1.23-.08-2.203-1.05-2.203-2.262l-.007-33.41c0-2.648.234-9.28-.344-11.796-.923-4.246-3.675-5.435-7.24-5.435-2.986 0-6.09 1.985-7.356 5.165-1.266 3.188-1.15 8.484-1.15 12.066v33.403c0 1.255-1.06 2.262-2.378 2.262h-12.297c-1.237-.08-2.21-1.051-2.21-2.262l-.015-33.41c0-7.025 1.142-17.362-7.59-17.362-8.858 0-8.506 10.074-8.506 17.362l-.007 33.403c-.022 1.276-1.084 2.283-2.401 2.283zm227.788-55.82c-9.084 0-9.662 12.328-9.662 20.017s-.117 24.131 9.545 24.131c9.545 0 10.006-13.262 10.006-21.345 0-5.303-.234-11.664-1.845-16.705-1.383-4.377-4.143-6.098-8.044-6.098zM310.025.613c18.284 0 28.173 15.647 28.173 35.533 0 19.222-10.92 34.468-28.173 34.468-17.933 0-27.712-15.647-27.712-35.132C282.305 15.86 292.2.612 310.025.612zm51.882 68.681h-12.275c-1.23-.08-2.211-1.05-2.211-2.261l-.015-63.028c.103-1.16 1.12-2.057 2.365-2.057l11.426-.008c1.076.059 1.961.788 2.188 1.766v9.636h.234c3.448-8.622 8.279-12.73 16.785-12.73 5.519 0 10.92 1.992 14.375 7.427C398 13.072 398 21.556 398 27.662v39.64c-.14 1.117-1.142 1.985-2.364 1.985h-12.349c-1.141-.073-2.064-.912-2.188-1.984V33.097c0-6.894.805-16.968-7.708-16.968-2.993 0-5.753 1.984-7.13 5.033-1.72 3.845-1.953 7.69-1.953 11.935v33.928c-.03 1.262-1.091 2.27-2.401 2.27zm-151.715-.16c-.813.73-1.991.78-2.913.284-4.092-3.385-4.824-4.953-7.064-8.177-6.756 6.864-11.543 8.921-20.305 8.921-10.372 0-18.438-6.376-18.438-19.134 0-9.965 5.424-16.742 13.139-20.061 6.683-2.925 16.023-3.458 23.167-4.253v-1.598c0-2.925.234-6.375-1.5-8.9-1.501-2.26-4.378-3.195-6.918-3.195-4.692 0-8.871 2.4-9.904 7.375-.212 1.11-1.024 2.204-2.137 2.262l-11.938-1.291c-1.01-.234-2.13-1.029-1.838-2.568C166.288 4.362 179.37 0 191.087 0c5.995 0 13.827 1.59 18.556 6.113 5.995 5.58 5.416 13.021 5.416 21.126v19.127c0 5.756 2.401 8.28 4.648 11.373.79 1.116.967 2.444-.036 3.26-2.518 2.102-6.983 5.968-9.443 8.15l-.036-.015zm-12.414-29.931v-2.656c-8.908 0-18.322 1.897-18.322 12.35 0 5.319 2.767 8.908 7.488 8.908 3.455 0 6.566-2.123 8.528-5.58 2.423-4.254 2.306-8.237 2.306-13.022zM48.72 69.133c-.813.73-1.991.781-2.913.285-4.092-3.385-4.824-4.953-7.064-8.177-6.763 6.864-11.55 8.921-20.305 8.921C8.06 70.162 0 63.786 0 51.028c0-9.965 5.417-16.742 13.139-20.061 6.683-2.925 16.015-3.458 23.16-4.253v-1.598c0-2.925.233-6.375-1.501-8.9-1.5-2.26-4.377-3.195-6.91-3.195-4.7 0-8.879 2.4-9.904 7.375-.212 1.11-1.024 2.204-2.137 2.262L3.91 21.367c-1.01-.234-2.13-1.029-1.845-2.568C4.81 4.362 17.89.007 29.615.007c5.995 0 13.827 1.59 18.556 6.113 5.995 5.581 5.416 13.022 5.416 21.126v19.128c0 5.755 2.401 8.28 4.648 11.372.79 1.116.967 2.444-.036 3.261-2.518 2.101-6.99 5.967-9.45 8.148l-.03-.021zm-12.422-29.93v-2.656c-8.908 0-18.32 1.897-18.32 12.35 0 5.319 2.766 8.908 7.487 8.908 3.462 0 6.573-2.123 8.528-5.58 2.422-4.254 2.305-8.237 2.305-13.022z"></path></g></svg>
+                    </div>
+        
+                    <div class="flex items-center justify-center col-span-1 md:col-span-3 lg:col-span-1">
+                        <svg class="h-5 mt-1 text-gray-500 fill-current dark:text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 278.7 36.3"><g><path class="st0" d="M238.1 14.4v21.9h7V21.7h25.6v14.6h7V14.4h-39.6m6.2-7.1h27c3.8-.7 6.5-4.1 7.3-7.3H237c.8 3.2 3.6 6.5 7.3 7.3m-27.5 29c3.5-1.5 5.4-4.1 6.2-7.1h-31.5V.1h-7.1v36.2h32.4M131.9 7.2h25c3.8-1.1 6.9-4 7.7-7.1H125v21.4h32.4V29H132c-4 1.1-7.4 3.8-9.1 7.3h41.5V14.4H132l-.1-7.2m-61.6.1h27c3.8-.7 6.6-4.1 7.3-7.3H62.9c.8 3.2 3.6 6.5 7.4 7.3m0 14.3h27c3.8-.7 6.6-4.1 7.3-7.3H62.9c.8 3.2 3.6 6.5 7.4 7.3m0 14.7h27c3.8-.7 6.6-4.1 7.3-7.3H62.9c.8 3.2 3.6 6.6 7.4 7.3M0 .1c.8 3.2 3.6 6.4 7.3 7.2h11.4l.6.2v28.7h7.1V7.5l.6-.2h11.4c3.8-1 6.5-4 7.3-7.2V0L0 .1"></path></g></svg>
+                    </div>
+        
+                    <div class="flex items-center justify-center col-span-2 md:col-span-3 lg:col-span-1">
+                        <svg class="h-8 text-gray-500 fill-current dark:text-gray-300" viewBox="0 0 2270 546" xmlns="http://www.w3.org/2000/svg"><g fill-rule="evenodd"><path d="M888.413 394.397l-31.127 144.717h-71.593L903.977 14.642h84.81l111.28 524.472h-72.371l-30.35-144.717H888.413zm100.373-58.364l-24.124-125.3c-7.003-35.797-14.007-82.463-19.441-119.828h-3.126c-5.434 38.13-13.242 86.365-20.22 119.827l-24.902 125.301h91.813zM1373.34.648v441.205c0 28.806 1.556 70.828 3.1 97.274h-63.02l-4.67-45.9h-2.334c-12.451 26.445-41.244 52.138-79.362 52.138-70.037 0-112.837-76.275-112.837-193.755 0-133.848 56.794-196.881 116.728-196.881 30.336 0 54.46 14.02 67.689 42.8h1.556V.648h73.15zm-73.163 304.258c0-6.991 0-15.551-.778-23.359-3.89-34.227-23.345-63.798-49.79-63.798-45.927 0-61.477 63.798-61.477 133.848 0 77.818 20.232 132.278 59.142 132.278 16.342 0 38.118-8.56 50.569-53.681 1.556-6.226 2.334-15.577 2.334-24.111V304.906zm247.399 240.446c-75.471 0-129.957-64.59-129.957-194.52 0-137.752 64.576-196.116 133.835-196.116 74.705 0 128.387 66.924 128.387 194.546 0 150.19-73.927 196.09-131.5 196.09h-.765zm2.321-57.573c45.122 0 55.251-80.153 55.251-137.726 0-56.82-10.116-137.739-56.794-137.739-48.26 0-57.586 80.919-57.586 137.74 0 63.02 10.895 137.725 58.364 137.725h.765zM1723.938.648h73.137V203.74h1.556c19.455-34.227 45.913-49.025 79.375-49.025 64.577 0 105.055 73.15 105.055 189.099 0 135.391-55.25 201.537-117.506 201.537-37.353 0-58.364-20.246-74.719-53.708h-3.086l-3.904 47.47h-63.02c1.556-25.668 3.112-68.468 3.112-97.274V.648zm73.137 404.618c0 8.586.778 17.146 3.113 23.358 11.66 45.926 34.24 55.251 49.012 55.251 43.579 0 59.92-57.572 59.92-135.391 0-72.371-17.106-130.735-60.698-130.735-24.124 0-43.578 28.793-49.025 56.03-1.557 7.781-2.335 17.91-2.335 25.68v105.807h.013zm293.92-40.453c.779 97.273 42.788 121.384 87.145 121.384 26.458 0 49.025-6.213 65.367-14.007l10.895 52.916c-22.568 11.673-56.808 17.912-90.27 17.912-94.925 0-144.73-71.594-144.73-188.321 0-123.732 56.795-199.994 135.392-199.994s115.172 75.484 115.172 170.435c0 18.664-.792 30.35-1.557 40.453l-177.413-.778zm109.712-52.126c.778-66.924-22.567-102.707-51.347-102.707-38.144 0-55.264 55.251-57.586 102.707h108.933z" fill-rule="nonzero"></path><path d="M373.462 16.043h218.501v523.07L373.462 16.044zm-153.926 0H.88v523.07l218.657-523.07zm76.976 192.77l139.218 330.3H344.5l-41.633-105.197H200.964l95.548-225.103z"></path></g></svg>
+                    </div>
+                </div> -->
+            </div>
+        </section>  
+        <div id="w-node-_9f488382-c649-058f-76bd-e6c17d1dd59e-a6140772" data-w-id="9f488382-c649-058f-76bd-e6c17d1dd59e" style="opacity: 1; will-change: transform; transform: translate3d(0px, 11.5258px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;" class="image-wrapper features-section"><img src="https://assets-global.website-files.com/624f34ee3b91afefdf14076f/625062483b253024a04f9e6c_image-features-blockchain-template.png" loading="eager" sizes="(max-width: 479px) 100vw, (max-width: 767px) 432px, (max-width: 991px) 73vw, (max-width: 1439px) 74vw, 1010.234375px" srcset="https://assets-global.website-files.com/624f34ee3b91afefdf14076f/625062483b253024a04f9e6c_image-features-blockchain-template-p-500.png 500w, https://assets-global.website-files.com/624f34ee3b91afefdf14076f/625062483b253024a04f9e6c_image-features-blockchain-template-p-800.png 800w, https://assets-global.website-files.com/624f34ee3b91afefdf14076f/625062483b253024a04f9e6c_image-features-blockchain-template.png 1520w" alt="A Crypto Wallet From The Future - Blockchain X Webflow Template" class="image"></div>
+    </div>
+</div>
+
+
+<!-- 
+<style>
+ .scrolling-container {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    max-width: 100vw;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #ffffff00;
+    border-radius: 10px;
+    margin: 8rem 3rem 4rem;
+    padding: 0 3rem;
+}
+
+.logos {
+    display: flex;
+    animation: scroll 20s linear infinite;
+}
+
+.logos:hover {
+    animation-play-state: paused;
+}
+
+.logos img {
+    height: 50px;
+    margin: 0 20px;
+    transition: all 0.2s ease-in-out;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.scrolling-container::before, .scrolling-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 1;
+}
+
+.scrolling-container::before {
+    left: 0;
+    background: linear-gradient(to right, #000000 60%, transparent 100%);
+}
+
+.scrolling-container::after {
+    right: 0;
+    background: linear-gradient(to left, #000000 60%, transparent 100%);
+}
+</style>
+<div class="scrolling-container">
+        <div class="logos">
+            <img src="https://seeklogo.com/images/W/web3js-logo-62DEE79B50-seeklogo.com.png" alt="Logo 1">
+            <img src="https://seeklogo.com/images/H/hardhat-logo-888739EBB4-seeklogo.com.png" alt="Logo 2">
+            <img src="https://miro.medium.com/v2/resize:fit:1400/1*taKV4LXmjcCMoHqXC0tjFg.png   " alt="Logo 3">
+            <img src="https://archive.trufflesuite.com/assets/logo.png" alt="Logo 4">
+            <img src="https://docs.soliditylang.org/en/latest/_images/solidity_logo.svg" alt="Logo 5">
+            <img src="https://cdn.iconscout.com/icon/free/png-256/free-react-1-282599.png?f=webp" alt="Logo 6">
+            <img src="https://docs.soliditylang.org/en/latest/_images/solidity_logo.svg" alt="Logo 5">
+            <img src="https://archive.trufflesuite.com/assets/logo.png" alt="Logo 4">
+            <img src="https://seeklogo.com/images/H/hardhat-logo-888739EBB4-seeklogo.com.png" alt="Logo 2">
+            <img src="https://seeklogo.com/images/W/web3js-logo-62DEE79B50-seeklogo.com.png" alt="Logo 1">
+        </div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const logosContainer = document.querySelector('.logos');
+    const logos = Array.from(logosContainer.children);
+    const totalLogosWidth = logos.reduce((total, logo) => total + logo.offsetWidth, 0);
+
+    // Duplicate the logos to create an infinite effect
+    const duplicateLogos = logos.map(logo => logo.cloneNode(true));
+    duplicateLogos.forEach(logo => logosContainer.appendChild(logo));
+
+    // Set the width of the container to accommodate the duplicated logos
+    logosContainer.style.width = `${totalLogosWidth * 2}px`;
+});
+
+</script>
+  -->
+  <!-- <section class="bg-black">
+    <div
+         class="max-w-lg bg-black px-4 pt-24 py-8 mx-auto text-left md:max-w-none md:text-center"
+       >
+         <h1
+           class="text-3xl font-extrabold leading-10 tracking-tight text-left text-white text-center sm:leading-none md:text-6xl text-4xl lg:text-7xl"
+         >
+           <span class="inline md:block">Join Us</span> 
+           <span
+             class=" mt-2 bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-emerald-400 to-green-500 md:inline-block"
+           > Let's Build<span class="bg-clip-text text-transparent bg-gradient-to-r from-teal-500 via-cyon-400 to-purple-300"> Your Web3 Empire</span> </span>
+         </h1>
+       </div>
+</section> -->
+<!-- robo animation starts -->
+<style>
+.robo-container{
+    width: 100vw;
+    height: 100vh;
+}
+</style>
+<div class="purple-gradient-wrapper">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.8.0/build/spline-viewer.js"></script>
+<spline-viewer url="https://prod.spline.design/v74dBVBQQCdCgCLH/scene.splinecode"></spline-viewer>
+</div>
+<div class="robo-container">
+
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.8.0/build/spline-viewer.js"></script>
+    <spline-viewer url="https://prod.spline.design/6naJYfs9nvArBnug/scene.splinecode"></spline-viewer>
+</div>
+
+
+ <!-- robo animation ends -->
+
+<!-- component -->
+
+
+<hr class="text-white mx-5" />
+<footer class="bg-black pb-5">
+<div class="max-w-screen-xl px-4 pt-8 mx-auto sm:px-6 lg:px-8">
+ <div class="sm:flex sm:items-center sm:justify-between">
+   <div class="flex justify-center text-teal-300 sm:justify-start">
+  <img class="rounded-full" src="https://sahilnetic.xyz/evilcat.png" width="40" height="40" />
+   </div>
+
+   <p class="mt-4 text-sm text-center text-gray-400 lg:text-right lg:mt-0">
+     T&C &nbsp; Career &nbsp; Privacy & Policy &nbsp; Developers
+   </p>
+ </div>
+</div>
+</footer>
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=667a7c2d3021cf4ea1b80a0c"
+        type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+        
+    <!-- <script src="https://cdn.prod.website-files.com/667a7c2d3021cf4ea1b80a0c/js/webflow.4da80a26d.js"
+        type="text/javascript"></script> -->
+    <script src="script.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.36/dist/lenis.min.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", (event) => {
+            // Smooth scrolling
+            const lenis = new Lenis({ resize: true });
+
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
+            }
+
+            // Grab all elements that have a "data-target" attribute
+            const scrollButtons = document.querySelectorAll('[data-target]');
+
+            // For each element, listen to a "click" event
+            scrollButtons.forEach(button => {
+                button.addEventListener('click', e => {
+                    e.preventDefault();
+
+                    // get the DOM element by the ID (data-target value)
+                    var target = button.dataset.target,
+                        $el = document.getElementById(target.replace('#', ''));
+
+                    // Use lenis.scrollTo() to scroll the page to the right element
+                    lenis.scrollTo($el, {
+                        offset: 0,
+                        immediate: false,
+                        duration: 1,
+                        easing: (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2), // https://easings.net
+                    });
+                });
+            });
+
+            requestAnimationFrame(raf);
+        })  
+    </script>
+    <script>
+        // Select the element you want to observe - on this case we want to check for changes
+        // on the Spline canvas element.
+        const targetElement = document.querySelector('.spline-scene canvas');
+
+        // Create a new MutationObserver
+        const observer = new MutationObserver((mutationsList, observer) => {
+            // Iterate over each mutation
+            for (const mutation of mutationsList) {
+                // Check if the mutation type is attributes
+                if (mutation.type === 'attributes') {
+                    // Check if the attribute that changed is the style attribute
+                    if (mutation.attributeName === 'style') {
+                        // Check if the display property has been set to 'block' - this is something
+                        // automatically applied to the canvas once it finishes loading the Spline
+                        // scene, so let's use it as a way to trigger the load out animation.
+                        const displayValue = targetElement.style.display;
+                        if (displayValue === 'block') {
+                            // Trigger a click on the invisible element that holds the 
+                            // Webflow interactions responsible to hide the loading screen.
+                            document.querySelector('.load-trigger').click();
+
+                            // Disconnect the observer once the callback is executed (if needed)
+                            observer.disconnect();
+                        }
+                    }
+                }
+            }
+        });
+
+        // Configure the observer to watch for changes to attributes
+        const config = { attributes: true };
+
+        // Start observing the target element
+        observer.observe(targetElement, config);
+    </script>
+
+    <script> // Optional - Set sticky section heights based on inner content width
+        // Makes scroll timing feel more natural
+        function setTrackHeights() {
+            $(".section-height").each(function (index) {
+                let trackWidth = $(this).find(".track").outerWidth();
+                $(this).height(trackWidth);
+            });
+        }
+        setTrackHeights();
+        window.addEventListener("resize", function () {
+            setTrackHeights();
+        });
+    </script>
+</body>
+
+</html>
